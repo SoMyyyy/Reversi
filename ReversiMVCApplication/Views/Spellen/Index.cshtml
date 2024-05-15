@@ -1,0 +1,114 @@
+@* This view displays all games with only one player. This is done by passing a list of these games to the view from the corresponding controller *@
+
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<ReversiMVCApplication.Models.SpelViewModel>
+<script src="~/js/app.js"></script>
+@{
+    ViewBag.Title = "Spel Info";
+    Layout = "_Layout";
+}
+
+@* @{ *@
+@*     var error = TempData["Error"] as string; *@
+@*     if (!String.IsNullOrEmpty(error)) *@
+@*     { *@
+@*         <script type="text/javascript">alert("@error")</script> *@
+@*     } *@
+@* } *@
+
+<div>
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+</div>
+
+<h1>Join a Game</h1>
+
+<p>
+    <a asp-action="Create">Start a New Game</a>
+</p>
+
+@if(TempData["Message"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Message"]
+    </div>
+}
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>@Html.DisplayNameFor(model => model.Omschrijving)</th>
+        <th>First Player</th>
+        <th>Second Player</th>
+        <th>Who is in turn!</th>
+        <th>
+            @{ string GameState = "Game state!"; }
+            @GameState
+        </th>
+        <th>To Join click 'Join'</th>
+        <th> </th>
+    </tr>
+    </thead>
+    <tbody>
+    @for (var i = 0; i < Model.Count(); i++)
+    {
+        var item = Model.ElementAt(i);
+        <tr>
+            <td>
+                @{
+                    var i1 = i + 1;
+                }
+                @i1
+            </td>
+            <td>@Html.DisplayFor(modelItem => item.Omschrijving)</td>
+            <td >@Html.DisplayFor(modelItem => item.Speler1UserName)</td>
+            <td >@Html.DisplayFor(modelItem => item.Speler2UserName)</td>
+            <td>
+                @{
+                    string aanDeBeurt = item.AanDeBeurt switch
+                    {
+                        1 => "Wit",
+                        2 => "Zwart",
+                        _ => "Unknown"
+                    };
+                }
+                @aanDeBeurt
+            </td>
+            <td>
+                @{
+                    string gameStatus = item.GameState switch
+                    {
+                        0 => "Wachten",
+                        1 => "Bezig",
+                        2 => "Klaar",
+                        _ => "Unknown"
+                    };
+                }
+                @gameStatus
+            </td>
+            <td>
+                <a class="btn btn-dark" asp-action="Join" asp-route-token="@item.Token">Join</a>
+            </td>
+
+            <td>
+
+
+                @if (User.IsInRole("Admin"))
+                {
+                    @* <div>@item.Token</div> *@
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-token="@item.Token">Delete</a>
+                }
+            </td>
+
+
+        </tr>
+    }
+    </tbody>
+</table>
