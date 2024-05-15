@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FenppAvmKcMmTfe9bKYqntFAjS+hbmv7yNP1Ls33cU0=",
+  "Source": "ReversiRestAPI",
+  "BasePath": "_content/ReversiRestAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
