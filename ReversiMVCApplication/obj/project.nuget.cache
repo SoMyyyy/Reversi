@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M1S/aPc1AMjykj1bEbtqg8bilGHLYzX84AJZ9qV0/AiCoJ7ZrCOFf8RZTFomIPWiBGXhN7LTLbL0BR5vHYV8WA==",
+  "dgSpecHash": "bTU2V+C5YQWMu6UnWTjgHksywZYyQYjwA/afFnSE+he4DcVWw1nqny00FTdd816IofppIlJ8LPVXKtAmU/m0YA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\19som\\source\\repos\\ReversiMVCApplication\\ReversiMVCApplication.csproj",
+  "projectFilePath": "C:\\Users\\19som\\RiderProjects\\Reversi\\ReversiMVCApplication\\ReversiMVCApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\19som\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\19som\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

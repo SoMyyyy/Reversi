@@ -11500,11 +11500,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\19som\\source\\repos\\ReversiMVCApplication\\ReversiMVCApplication.csproj",
+      "projectUniqueName": "C:\\Users\\19som\\RiderProjects\\Reversi\\ReversiMVCApplication\\ReversiMVCApplication.csproj",
       "projectName": "ReversiMVCApplication",
-      "projectPath": "C:\\Users\\19som\\source\\repos\\ReversiMVCApplication\\ReversiMVCApplication.csproj",
+      "projectPath": "C:\\Users\\19som\\RiderProjects\\Reversi\\ReversiMVCApplication\\ReversiMVCApplication.csproj",
       "packagesPath": "C:\\Users\\19som\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\19som\\source\\repos\\ReversiMVCApplication\\obj\\",
+      "outputPath": "C:\\Users\\19som\\RiderProjects\\Reversi\\ReversiMVCApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\19som\\AppData\\Roaming\\NuGet\\NuGet.Config",
