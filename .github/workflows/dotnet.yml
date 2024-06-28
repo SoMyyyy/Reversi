@@ -32,5 +32,5 @@ jobs:
       run: dotnet restore ReversiRestApi/ReversiRestAPI.sln
     - name: Build RestApi
       run: dotnet build ReversiRestApi/ReversiRestAPI.sln --no-restore 
-    - name: Test RestApi
+    - name: Test ReversiRestApi
       run: dotnet test ReversiRestApi/ReversiRestAPI.sln --no-build --verbosity normal
