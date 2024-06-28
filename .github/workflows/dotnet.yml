@@ -28,8 +28,8 @@ jobs:
       run: dotnet test ReversiMVCApplication/ReversiMVCApplication.sln --no-build --verbosity normal
    
     - name: Restore dependencies
-      run: dotnet restore ReversiRestApi/ReversiRestApi.sln
+      run: dotnet restore ../../ReversiRestApi/ReversiRestApi.sln
     - name: Build
-      run: dotnet build ReversiRestApi/ReversiRestApi.sln --no-restore 
+      run: dotnet build ../../ReversiRestApi/ReversiRestApi.sln --no-restore 
     - name: Test
-      run: dotnet test ReversiRestApi/ReversiRestApi.sln --no-build --verbosity normal
+      run: dotnet test ../../ReversiRestApi/ReversiRestApi.sln --no-build --verbosity normal
