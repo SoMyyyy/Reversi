@@ -29,8 +29,8 @@ jobs:
     - name: Navigate to the RestApi
       run: cd ..
     - name: Restore dependencies RestApi
-      run: dotnet restore ReversiRestApi/ReversiRestApi.sln
+      run: dotnet restore ReversiRestApi/ReversiRestAPI.sln
     - name: Build RestApi
-      run: dotnet build ReversiRestApi/ReversiRestApi.sln --no-restore 
+      run: dotnet build ReversiRestApi/ReversiRestAPI.sln --no-restore 
     - name: Test RestApi
-      run: dotnet test ReversiRestApi/ReversiRestApi.sln --no-build --verbosity normal
+      run: dotnet test ReversiRestApi/ReversiRestAPI.sln --no-build --verbosity normal
