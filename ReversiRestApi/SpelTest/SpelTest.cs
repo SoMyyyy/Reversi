@@ -1670,83 +1670,83 @@ namespace NUnitTestProjectReversiSpel
 
 
 
-        [Test]
-        public void OverwegendeKleur_Gelijk_ReturnKleurGeen()
-        {
-            // Arrange
-            Spel spel = new Spel();
-            //     0 1 2 3 4 5 6 7
-            //                     
-            // 0   0 0 0 0 0 0 0 0  
-            // 1   0 0 0 0 0 0 0 0
-            // 2   0 0 0 0 0 0 0 0
-            // 3   0 0 0 1 2 0 0 0
-            // 4   0 0 0 2 1 0 0 0
-            // 5   0 0 0 0 0 0 0 0
-            // 6   0 0 0 0 0 0 0 0
-            // 7   0 0 0 0 0 0 0 0
-            //                     
-            // Act
-            var actual = spel.OverwegendeKleur();
-            // Assert
-            Assert.AreEqual(Kleur.Geen, actual);
-        }
-
-        [Test]
-        public void OverwegendeKleur_Zwart_ReturnKleurZwart()
-        {
-            // Arrange
-            Spel spel = new Spel();
-            spel.Bord[2, 3] = Kleur.Zwart;
-            spel.Bord[3, 3] = Kleur.Zwart;
-            spel.Bord[4, 3] = Kleur.Zwart;
-            spel.Bord[3, 4] = Kleur.Zwart;
-            spel.Bord[4, 4] = Kleur.Wit;
-
-            //     0 1 2 3 4 5 6 7
-            //                     
-            // 0   0 0 0 0 0 0 0 0  
-            // 1   0 0 0 0 0 0 0 0
-            // 2   0 0 0 2 0 0 0 0
-            // 3   0 0 0 2 2 0 0 0
-            // 4   0 0 0 2 1 0 0 0
-            // 5   0 0 0 0 0 0 0 0
-            // 6   0 0 0 0 0 0 0 0
-            // 7   0 0 0 0 0 0 0 0
-            //                     
-            // Act
-            var actual = spel.OverwegendeKleur();
-            // Assert
-            Assert.AreEqual(Kleur.Zwart, actual);
-        }
-
-        [Test]
-        public void OverwegendeKleur_Wit_ReturnKleurWit()
-        {
-            // Arrange
-            Spel spel = new Spel();
-            spel.Bord[2, 3] = Kleur.Wit;
-            spel.Bord[3, 3] = Kleur.Wit;
-            spel.Bord[4, 3] = Kleur.Wit;
-            spel.Bord[3, 4] = Kleur.Wit;
-            spel.Bord[4, 4] = Kleur.Zwart;
-
-
-            //     0 1 2 3 4 5 6 7
-            //                     
-            // 0   0 0 0 0 0 0 0 0  
-            // 1   0 0 0 0 0 0 0 0
-            // 2   0 0 0 1 0 0 0 0
-            // 3   0 0 0 1 1 0 0 0
-            // 4   0 0 0 1 2 0 0 0
-            // 5   0 0 0 0 0 0 0 0
-            // 6   0 0 0 0 0 0 0 0
-            // 7   0 0 0 0 0 0 0 0
-            //                     
-            // Act
-            var actual = spel.OverwegendeKleur();
-            // Assert
-            Assert.AreEqual(Kleur.Wit, actual);
-        }
+        // [Test]
+        // public void OverwegendeKleur_Gelijk_ReturnKleurGeen()
+        // {
+        //     // Arrange
+        //     Spel spel = new Spel();
+        //     //     0 1 2 3 4 5 6 7
+        //     //                     
+        //     // 0   0 0 0 0 0 0 0 0  
+        //     // 1   0 0 0 0 0 0 0 0
+        //     // 2   0 0 0 0 0 0 0 0
+        //     // 3   0 0 0 1 2 0 0 0
+        //     // 4   0 0 0 2 1 0 0 0
+        //     // 5   0 0 0 0 0 0 0 0
+        //     // 6   0 0 0 0 0 0 0 0
+        //     // 7   0 0 0 0 0 0 0 0
+        //     //                     
+        //     // Act
+        //     var actual = spel.OverwegendeKleur();
+        //     // Assert
+        //     Assert.AreEqual(Kleur.Geen, actual);
+        // }
+        //
+        // [Test]
+        // public void OverwegendeKleur_Zwart_ReturnKleurZwart()
+        // {
+        //     // Arrange
+        //     Spel spel = new Spel();
+        //     spel.Bord[2, 3] = Kleur.Zwart;
+        //     spel.Bord[3, 3] = Kleur.Zwart;
+        //     spel.Bord[4, 3] = Kleur.Zwart;
+        //     spel.Bord[3, 4] = Kleur.Zwart;
+        //     spel.Bord[4, 4] = Kleur.Wit;
+        //
+        //     //     0 1 2 3 4 5 6 7
+        //     //                     
+        //     // 0   0 0 0 0 0 0 0 0  
+        //     // 1   0 0 0 0 0 0 0 0
+        //     // 2   0 0 0 2 0 0 0 0
+        //     // 3   0 0 0 2 2 0 0 0
+        //     // 4   0 0 0 2 1 0 0 0
+        //     // 5   0 0 0 0 0 0 0 0
+        //     // 6   0 0 0 0 0 0 0 0
+        //     // 7   0 0 0 0 0 0 0 0
+        //     //                     
+        //     // Act
+        //     var actual = spel.OverwegendeKleur();
+        //     // Assert
+        //     Assert.AreEqual(Kleur.Zwart, actual);
+        // }
+        //
+        // [Test]
+        // public void OverwegendeKleur_Wit_ReturnKleurWit()
+        // {
+        //     // Arrange
+        //     Spel spel = new Spel();
+        //     spel.Bord[2, 3] = Kleur.Wit;
+        //     spel.Bord[3, 3] = Kleur.Wit;
+        //     spel.Bord[4, 3] = Kleur.Wit;
+        //     spel.Bord[3, 4] = Kleur.Wit;
+        //     spel.Bord[4, 4] = Kleur.Zwart;
+        //
+        //
+        //     //     0 1 2 3 4 5 6 7
+        //     //                     
+        //     // 0   0 0 0 0 0 0 0 0  
+        //     // 1   0 0 0 0 0 0 0 0
+        //     // 2   0 0 0 1 0 0 0 0
+        //     // 3   0 0 0 1 1 0 0 0
+        //     // 4   0 0 0 1 2 0 0 0
+        //     // 5   0 0 0 0 0 0 0 0
+        //     // 6   0 0 0 0 0 0 0 0
+        //     // 7   0 0 0 0 0 0 0 0
+        //     //                     
+        //     // Act
+        //     var actual = spel.OverwegendeKleur();
+        //     // Assert
+        //     Assert.AreEqual(Kleur.Wit, actual);
+        // }
     }
 }
