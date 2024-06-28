@@ -20,13 +20,10 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: navigating to Rest
-      run: cd ReversiRestApi 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ReversiMVCApplication/ReversiMVCApplication.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build ReversiMVCApplication/ReversiMVCApplication.sln --no-restore 
     - name: Test
-      run: dotnet test --no-build --verbosity normal
-    - name: Navigate back to root
-      run: cd .. 
+      run: dotnet test ReversiMVCApplication/ReversiMVCApplication.sln --no-build --verbosity normal
+   
